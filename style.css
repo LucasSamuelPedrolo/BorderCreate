@@ -99,22 +99,22 @@ input::-webkit-inner-spin-button {
     height: 200px;
 }
 
-.border-pequeno{
+.border-pequeno {
     width: 90px;
     height: 90px;
 }
 
-.border-medio{
+.border-medio {
     width: 150px;
     height: 150px;
 }
 
-.border-grande{
+.border-grande {
     width: 250px;
     height: 250px;
 }
 
-.border-edit p{
+.border-edit p {
     display: block;
     width: 100%;
     text-align: center;
@@ -124,6 +124,7 @@ input::-webkit-inner-spin-button {
 .area-css {
     border: 1px black solid;
     width: 90%;
+    position: relative;
 }
 
 .border-text-css {
@@ -136,4 +137,14 @@ input::-webkit-inner-spin-button {
 .span-text-css {
     color: rgb(197, 15, 15);
     font-weight: bold;
+}
+
+.copy-mode {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.copy-mode img {
+    width: 30px;
 }

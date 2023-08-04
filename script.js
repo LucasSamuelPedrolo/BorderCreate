@@ -7,12 +7,19 @@ const btnEnviar = document.querySelector('#btn-enviar');
 
 const borda = document.querySelectorAll('.border-edit');
 
-const areaCssCopy = document.querySelector('.area-css');
+const areaCssCopy = document.querySelector('.span-text-css');
+const text2copy = document.querySelector('.border-text-css');
+
+const btnCopy = document.querySelector('.copy-mode');
 
 btnEnviar.addEventListener("click", () => {
     addBorderEdit(bordaEsquerdaCima, bordaDireitaCima, bordaEsquerdaBaixo, bordaDireitaBaixo, borda);
 
     cssDisplay();
+});
+
+btnCopy.addEventListener('click', () => {
+    navigator.clipboard.writeText(text2copy.innerText);
 })
 
 function addBorderEdit(btnLeftUp, btnRightUp, btnLeftDown, btnRightDown, bordas) {
@@ -38,11 +45,15 @@ function addBorderEdit(btnLeftUp, btnRightUp, btnLeftDown, btnRightDown, bordas)
 
 }
 
-function detectaValorVazio(value, elem){
+function detectaValorVazio(value, elem) {
     const adicionaZero = value ? value : 0;
     return adicionaZero
 }
 
-function cssDisplay(){
-    
+function cssDisplay() {
+    areaCssCopy.innerHTML = `${bordaEsquerdaCima.value}px ${bordaDireitaCima.value}px ${bordaEsquerdaBaixo.value}px ${bordaDireitaBaixo.value}px`
+}
+
+function copyMode() {
+
 }
