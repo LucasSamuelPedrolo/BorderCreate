@@ -53,7 +53,3 @@ function detectaValorVazio(value, elem) {
 function cssDisplay() {
     areaCssCopy.innerHTML = `${bordaEsquerdaCima.value}px ${bordaDireitaCima.value}px ${bordaEsquerdaBaixo.value}px ${bordaDireitaBaixo.value}px`
 }
-
-function copyMode() {
-
-}
