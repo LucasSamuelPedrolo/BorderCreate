@@ -11,13 +11,14 @@
 <body>
 
     <main>
-        <h1 class="titulo-principal">Vizualizador de bordas</h1>
+        <h1 class="titulo-principal">Vizualizador de bordas em pixels!</h1>
+
         <section class="main-content">
 
             <div class="border-holder">
                 <input type="number" class="btn-border-radius" value="0" min="0" id="border-edit-left-up" minlength="0">
 
-                <input type="number" class="btn-border-radius" value="0" min="0" id="border-edit-right-up"
+                <input value="0" type="number" class="btn-border-radius" value="0" min="0" id="border-edit-right-up"
                     minlength="0">
 
                 <input type="number" class="btn-border-radius" value="0" min="0" id="border-edit-left-bottom"
@@ -28,14 +29,22 @@
 
                 <button type="button" class="btn-enviar-valores" id="btn-enviar">Enviar valores</button>
 
-                <div class="border-edit">
-
+                <div class="border-edit border-pequeno">
+                    <p>
+                        Pequeno
+                    </p>
+                </div>
+                <div class="border-edit border-medio">
+                    <p>Médio</p>
+                </div>
+                <div class="border-edit border-grande">
+                    <p>Grande</p>
                 </div>
 
             </div>
 
             <div class="area-css">
-
+                <p class="border-text-css">border-radius : <span class="span-text-css">0px 0px 0px 0px</span></p>
             </div>
         </section>
     </main>

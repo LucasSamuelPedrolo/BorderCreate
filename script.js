@@ -5,14 +5,44 @@ const bordaDireitaBaixo = document.getElementById('border-edit-right-bottom');
 
 const btnEnviar = document.querySelector('#btn-enviar');
 
-const borda = document.getElementsByClassName('border-edit');
+const borda = document.querySelectorAll('.border-edit');
+
+const areaCssCopy = document.querySelector('.area-css');
 
 btnEnviar.addEventListener("click", () => {
-    addBorderEdit(bordaEsquerdaCima, bordaDireitaCima, bordaEsquerdaBaixo, bordaDireitaBaixo, borda)
+    addBorderEdit(bordaEsquerdaCima, bordaDireitaCima, bordaEsquerdaBaixo, bordaDireitaBaixo, borda);
+
+    cssDisplay();
 })
 
-function addBorderEdit(bordaLUP, bordaRUP, bordaLBO, bordaRBO, borda) {
+function addBorderEdit(btnLeftUp, btnRightUp, btnLeftDown, btnRightDown, bordas) {
+    const valores = [
+        btnLeftUp.value,
+        btnRightUp.value,
+        btnLeftDown.value,
+        btnRightDown.value
+    ];
 
-   
+    const bordaEdit = [
+        'border-top-left-radius',
+        'border-top-right-radius',
+        'border-bottom-left-radius',
+        'border-bottom-right-radius'
+    ]
+
+    for (let i = 0; i < valores.length; i++) {
+        for (const iterator of bordas) {
+            iterator.style.cssText += `${bordaEdit[i]} : ${detectaValorVazio(valores[i])}px`
+        }
     }
+
+}
+
+function detectaValorVazio(value, elem){
+    const adicionaZero = value ? value : 0;
+    return adicionaZero
+}
+
+function cssDisplay(){
+    
 }

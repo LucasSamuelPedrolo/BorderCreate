@@ -32,12 +32,15 @@ main {
     background-color: rgb(107, 105, 105);
     border-radius: 3px;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .btn-border-radius {
-    max-width: 25px;
+    max-width: 55px;
+    width: auto;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -49,17 +52,21 @@ input::-webkit-inner-spin-button {
 
 .border-holder {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     min-width: 200px;
-    width: 60%;
-    height: 80%;
+    flex-grow: 1;
+    width: 100%;
     position: relative;
-    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .btn-enviar-valores {
-    order: 1;
+    position: absolute;
+    height: 35px;
+    bottom: 0;
+    font-size: 25px;
 }
 
 .btn-border-radius:nth-child(1) {
@@ -87,15 +94,46 @@ input::-webkit-inner-spin-button {
 }
 
 .border-edit {
-    border: solid white 3px;
-    width: 90%;
-    height: 90%;
+    border: solid rgb(60, 243, 14) 3px;
+    width: 200px;
+    height: 200px;
+}
+
+.border-pequeno{
+    width: 90px;
+    height: 90px;
+}
+
+.border-medio{
+    width: 150px;
+    height: 150px;
+}
+
+.border-grande{
+    width: 250px;
+    height: 250px;
+}
+
+.border-edit p{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
 }
 
 .area-css {
-    height: 95%;
-    width: 10%;
     border: 1px black solid;
-    border-bottom-left-radius: ;
+    width: 90%;
 }
 
+.border-text-css {
+    padding: 0 10px;
+    color: rgb(168, 160, 160);
+    font-size: 25px;
+
+}
+
+.span-text-css {
+    color: rgb(197, 15, 15);
+    font-weight: bold;
+}
